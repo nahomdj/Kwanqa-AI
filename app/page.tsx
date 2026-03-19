@@ -150,6 +150,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Design Prompt feature card */}
+      <section className="band-soft">
+        <div className="section-shell">
+          <FadeInOnScroll>
+            <div
+              className="card"
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 20,
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div style={{ flex: '1 1 280px' }}>
+                <div className="chip" style={{ marginBottom: 10 }}>
+                  <span
+                    style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: '999px',
+                      backgroundColor: 'var(--accent-color)',
+                    }}
+                  />
+                  <span>New · Website Design</span>
+                </div>
+                <h2 style={{ fontSize: 16, margin: '0 0 8px' }}>
+                  Generate a Website Design Prompt
+                </h2>
+                <p className="text-secondary" style={{ fontSize: 13, margin: 0 }}>
+                  Describe your website idea and Kwanqa AI will craft a detailed
+                  design prompt ready to use with Midjourney, Stable Diffusion,
+                  Figma AI, or your designer.
+                </p>
+              </div>
+              <Link href="/design-prompt">
+                <button className="btn btn-accent">Try Design Prompt</button>
+              </Link>
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="site-footer">
         <div className="site-footer-inner">
@@ -174,6 +217,12 @@ export default function Home() {
               style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}
             >
               Courses
+            </Link>
+            <Link
+              href="/design-prompt"
+              style={{ color: 'var(--secondary-text)', textDecoration: 'none' }}
+            >
+              Design Prompt
             </Link>
             <Link
               href="/about"
