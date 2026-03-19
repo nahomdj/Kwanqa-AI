@@ -162,6 +162,7 @@ export default function Header() {
           {/* main product links */}
           <NavLink href="/tutor" label="Tutor" currentPath={pathname} />
           <NavLink href="/courses" label="Courses" currentPath={pathname} />
+          <NavLink href="/design-prompt" label="Design Prompt" currentPath={pathname} />
 
           {/* single company/info link */}
           <NavLink href="/about" label="About" currentPath={pathname} />

@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FadeInOnScroll } from '@/components/FadeInOnScroll';
 
@@ -28,6 +28,14 @@ const DEFAULT_PROFILE: LearnerProfile = {
 const PROFILE_STORAGE_KEY = 'kwanqa-tutor-profile-v1';
 
 export default function TutorPage() {
+  return (
+    <Suspense>
+      <TutorPageInner />
+    </Suspense>
+  );
+}
+
+function TutorPageInner() {
   const searchParams = useSearchParams();
 
   const [messages, setMessages] = useState<ChatMessage[]>([
